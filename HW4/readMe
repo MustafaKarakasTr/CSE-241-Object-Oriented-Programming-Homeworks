@@ -1,0 +1,21 @@
+I added "quit" and "Quit" command to be able to end game instantaneously.
+When you write it number of cells fulled writed at the end of static string which is named as numbers_of_nonEmpty_cells.
+index of the number of fulled cells in the specific board will be reached by help of index_of_game variable which is also private and int.
+When user wants to see number of filled cells,index_of_gameTH element of string will contain it. 
+For example:
+	if you have filled 10 cells and you wrote quit command :
+		string will be = "10 "
+		and index of 10 (0) is kept in the class' index_of_game variable
+	when you started second game and one of the player wins and 30 cells are full then our string will be = "10 30 "
+	and index of 30 (1) is kept in the class' index_of_game variable
+when you compare these two games we will reach them with the help of index_of_game variable
+
+
+Copy constructer && assignment operator overload:
+	They will help us to keep playing copied game if it has not ended yet. If it has ended , then program will show a message such that: "Copied game has already ended See you next time"
+	
+	In main I wrote them such that they will work automaticly , so after the game ends if it tries to make you continue from where were you last, do not be suprised. If you delete copy constructer and delete constructer , games will come by one by one.
+
+After making undo or loading a file one of the scores is wrong. After making 1 move it shows the true score hopefully.
+
+
