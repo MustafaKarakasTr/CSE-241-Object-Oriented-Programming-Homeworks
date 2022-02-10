@@ -1,4 +1,4 @@
-reset is a command if you type it the table will be empty
+reset command makes table empty
 setSize 6x6
 	this clears the table and changes the side , it checks if the given numbers are valid
 
