@@ -1,28 +1,23 @@
 #include "AbstractHex.h"
 namespace MustafaKarakas1801042627{
 	AbstractHex :: AbstractHex(){
-		
 	    setSize();
 	    setGameType();
 	    createBoard();
-	    
 	}
-	AbstractHex :: AbstractHex (int _size){
 
+	AbstractHex :: AbstractHex (int _size){
 		setSize(_size);
 		setGameType();
 		createBoard();
-
 	}
+	
 	AbstractHex :: AbstractHex(int _size,int _against_cpu)
 	{	
 		setSize(_size);
 		setGameType(_against_cpu);
 		createBoard();
-
 	}
-
-	
 
 	const AbstractHex& AbstractHex :: operator =(  AbstractHex &rSide){
 		if(this == &rSide){
@@ -681,28 +676,19 @@ namespace MustafaKarakas1801042627{
 			cerr<<"There is no file which has name:"<<theFile<<endl;		
 			return false;	
 		}
-		/*if(getSize()>0) // If game has just started there is no array to clear
-			makeArraysEmpty();
-		*/
+
 		fp>>_against_cpu>>_size>>_currentPlayer>>_counter>>score1>>score2;
 		set_against_cpu(_against_cpu);
 		setCurrentPlayer(_currentPlayer);
 		setSize(_size);
 		setCounter(_counter);
 		_size=getSize();
-		/*if(size>0)
-			makeArraysEmpty(); // make all Arrays empty
-		*/
+
 		AbstractHex :: createBoard();
 		createBoard(); // create them again
 		cerr<<"Tablo yeniden olusturuldu\n";
 		fp>>(*this);
-		/*for(int i=0;i<_size;i++){
-			for(int j=0;j<_size;j++){
-				fp>>var;
-				hexCells[i][j].setVariable(var);
-			}
-		}*/
+
 		int temp;
 		int pos,row;
 		char _var;

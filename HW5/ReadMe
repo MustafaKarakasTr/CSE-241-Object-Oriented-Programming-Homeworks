@@ -1,4 +1,2 @@
-reset command makes table empty
-setSize 6x6
-	this clears the table and changes the side , it checks if the given numbers are valid
-
+$ make
+$ ./hw5
